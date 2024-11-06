@@ -2,10 +2,10 @@ from openai import OpenAI
 import streamlit as st
 
 with st.sidebar:
-    openai_base_url = st.text_input("Grok API Key", key="openai_base_url", value="https://api.x.ai/v1")
+    openai_base_url = st.text_input("Grok base url", key="openai_base_url", value="https://api.x.ai/v1")
     openai_api_key = st.text_input("Grok API Key", key="chatbot_api_key", type="password")
     "[Get an Grok API key](https://x.ai/blog/api)"
-    openai_model = st.text_input("Grok API Key", key="openai_model",value="grok-beta")
+    openai_model = st.text_input("Grok model", key="openai_model",value="grok-beta")
  
 
 st.title("💬 Grok Chatbot")
