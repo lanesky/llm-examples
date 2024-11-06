@@ -14,7 +14,7 @@ with st.sidebar:
     
 
 st.title("🔎 LangChain - Chat with search")
-st.caption("🚀 请输入您的 Grok API key 以访问完全功能。若不输入，将使用作者的免费API key（作者在2024年底前每个月有25美元额度）。")
+
 
 """
 In this example, we're using `StreamlitCallbackHandler` to display the thoughts and actions of an agent in an interactive Streamlit app.
@@ -35,8 +35,8 @@ if prompt := st.chat_input(placeholder="Who won the Women's U.S. Open in 2018?")
     st.chat_message("user").write(prompt)
 
     if not openai_api_key:
-        openai_api_key = "xai-2qklKzXMt7oIHg6Ukljmiy1qbHEXTxF0zoVNUKhTIjBiIpNRrB8tbnOZIjj3AoIpxDV1haJOPpOvYjlg"
-        st.info("Will use free api key for the app.")
+        st.info("Please add your api key to continue.")
+        st.stop()
 
     if not openai_base_url:
         st.info("Please add your Base Url to continue.")
